@@ -5,6 +5,7 @@ read -p "Install dependencies?" -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   dependencies="python3 python3-pip npm xclip unzip"
+  sudo apt update
   echo "Installing dependencies."
   sudo apt install $dependencies -y
 fi
