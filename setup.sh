@@ -6,14 +6,7 @@ echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   dependencies="python3 python3-pip npm xclip"
   echo "Installing dependencies."
-
-  for package in $dependencies
-  do
-    installed=$(apt -qq list $package)
-    if [[ -z "$installed" ]]; then
-      sudo apt install $package -y
-    fi
-  done
+  sudo apt install $dependencies -y
 fi
 
 read -p "Install latest nvim?" -n 1 -r 
