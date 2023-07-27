@@ -66,3 +66,10 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   pip3 install black
 fi
 
+read -p "Add ~/.local/bin to path??" -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+  echo 'export PATH=$PATH:~/home/$USER/.local/bin' >> ~/.bashrc
+fi
+
+echo "Run source ~/.bashrc to make sure everything works. Enjoy."
