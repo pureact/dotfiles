@@ -16,13 +16,13 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 
   curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
   tar xzf nvim-linux64.tar.gz
-  echo 'export PATH=$PATH:~/home/$USER/nvim-linux64/bin' >> ~/.bashrc
+  echo 'alias nvim=/home/$USER/nvim-linux64/bin/nvim' >> ~/.bashrc
 fi
 
 read -p "Install NvChad?" -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-  source ~/.bashrc
+  alias nvim=/home/$USER/nvim-linux64/bin/nvim
   git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 fi
 
@@ -41,7 +41,9 @@ fi
 read -p "Install and use latest node?" -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-  source ~/.bashrc
+  export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
   nvm install node
   nvm use node
 fi
