@@ -23,8 +23,7 @@ fi
 read -p "Install NvChad?" -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-  alias nvim=/home/$USER/nvim-linux64/bin/nvim
-  git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
+  git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && /home/$USER/nvim-linux64/bin/nvim
 fi
 
 read -p "Copy NvChad config from dotfiles?" -n 1 -r
