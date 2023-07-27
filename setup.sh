@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 echo "Setting up system."
 
 read -p "Install dependencies?" -n 1 -r
@@ -10,7 +10,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   sudo apt install $dependencies -y
 fi
 
-read -p "Install latest nvim?" -n 1 -r 
+read -p "Install latest nvim?" -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   echo "Installing nvim."
@@ -29,7 +29,7 @@ fi
 read -p "Copy NvChad config from dotfiles?" -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-  \cp -r dotfiles/.config .config/
+  rsync -a "/home/$USER/dotfiles/.config/" "/home/$USER/.config/"
 fi
 
 read -p "Install nvm?" -n 1 -r
@@ -66,7 +66,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   pip3 install black
 fi
 
-read -p "Add ~/.local/bin to path??" -n 1 -r
+read -p "Add ~/.local/bin to path?" -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   echo 'export PATH=$PATH:~/home/$USER/.local/bin' >> ~/.bashrc
