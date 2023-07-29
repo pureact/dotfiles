@@ -10,6 +10,7 @@ M.general = {
 M.custom = {
 	n = {
 		["<leader>u"] = { "yypv$r-", "Underline" },
+    ["<leader>tw"] = { "<cmd> %s/\\s\\+$//e <CR>", "Trim Whitespace"}
 	},
 }
 

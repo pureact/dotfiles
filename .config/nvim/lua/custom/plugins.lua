@@ -63,13 +63,6 @@ local plugins = {
     end,
     lazy = false,
   },
-  {
-    "cappyzawa/trim.nvim",
-    config = function()
-      require("trim").setup({})
-    end,
-    lazy = false
-  }
 
   -- To make a plugin not be loaded
   -- {
