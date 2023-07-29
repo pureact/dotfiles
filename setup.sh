@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 echo "Setting up system."
 
 read -p "Install dependencies?" -n 1 -r
