@@ -1,0 +1,6 @@
+[tool.pyright]
+typeCheckingMode = "strict"
+
+[tool.ruff]
+select = ["ALL"]
+line-length = 300
