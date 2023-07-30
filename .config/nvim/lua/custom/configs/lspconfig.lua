@@ -15,6 +15,3 @@ end
 
 -- 
 -- lspconfig.pyright.setup { blabla}
-lspconfig.pyright.setup {
-  root_dir = vim.lsp.buf.list_workspace_folders()[1],
-}
