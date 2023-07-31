@@ -3,5 +3,5 @@ typeCheckingMode = "strict"
 
 [tool.ruff]
 select = ["ALL"]
-ignore = ["S101"]
+ignore = ["S101", "G004", "FBT002", "FBT001"]
 line-length = 300
