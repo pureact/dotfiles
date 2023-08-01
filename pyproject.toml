@@ -5,3 +5,5 @@ typeCheckingMode = "strict"
 select = ["ALL"]
 ignore = ["S101", "G004", "FBT002", "FBT001"]
 line-length = 300
+[tool.ruff.per-file-ignores]
+"setup.py" = ["INP001"]
