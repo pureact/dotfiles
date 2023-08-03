@@ -3,7 +3,7 @@ typeCheckingMode = "strict"
 
 [tool.ruff]
 select = ["ALL"]
-ignore = ["S101", "FBT", "D203", "D212"]
+ignore = ["S101", "FBT", "D203", "D204", "D212"]
 exclude = ["venv", ".venv", "typings", "typing"]
 line-length = 300
 
